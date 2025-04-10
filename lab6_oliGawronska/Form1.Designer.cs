@@ -36,13 +36,14 @@
             // 
             // start
             // 
-            this.start.Location = new System.Drawing.Point(340, 201);
+            this.start.Location = new System.Drawing.Point(340, 199);
             this.start.Name = "start";
             this.start.Size = new System.Drawing.Size(133, 58);
             this.start.TabIndex = 0;
             this.start.Text = "Start";
             this.start.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.start.UseVisualStyleBackColor = true;
+            this.start.Click += new System.EventHandler(this.start_Click);
             // 
             // settings
             // 
@@ -52,6 +53,7 @@
             this.settings.TabIndex = 1;
             this.settings.Text = "Ustawienia";
             this.settings.UseVisualStyleBackColor = true;
+            this.settings.Click += new System.EventHandler(this.settings_Click);
             // 
             // end
             // 
