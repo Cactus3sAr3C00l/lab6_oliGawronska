@@ -40,6 +40,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.saveSettings = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.szop = new System.Windows.Forms.RichTextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // x_textBox
@@ -108,7 +110,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(470, 211);
+            this.label3.Location = new System.Drawing.Point(555, 225);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 20);
             this.label3.TabIndex = 8;
@@ -144,18 +146,38 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(454, 251);
+            this.richTextBox1.Location = new System.Drawing.Point(540, 257);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(77, 48);
             this.richTextBox1.TabIndex = 12;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
+            // szop
+            // 
+            this.szop.Location = new System.Drawing.Point(387, 257);
+            this.szop.Name = "szop";
+            this.szop.Size = new System.Drawing.Size(77, 48);
+            this.szop.TabIndex = 13;
+            this.szop.Text = "";
+            this.szop.TextChanged += new System.EventHandler(this.szop_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(403, 225);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 20);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Szopy";
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.szop);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.saveSettings);
             this.Controls.Add(this.label5);
@@ -190,5 +212,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button saveSettings;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox szop;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -14,10 +14,10 @@ namespace lab6_oliGawronska
 {
     public partial class Form3: Form
     {
-        private int x_row, y_row, time, dyd, croc;
+        private int x_row, y_row, time, dyd, croc, szopy;
         Form1 form1;
      
-        public Form3(int x_row2,int y_row2, int time2, int dyd2,int croc2, Form1 form)
+        public Form3(int x_row2,int y_row2, int time2, int dyd2,int croc2, int szop2, Form1 form)
         {
             form1 = form;
             InitializeComponent();
@@ -26,20 +26,28 @@ namespace lab6_oliGawronska
             this.time = time2;
             this.dyd = dyd2;
             this.croc = croc2;
+            this.szopy = szop2;
 
             x_textBox.Text = x_row.ToString();
             y_textBox.Text = y_row.ToString();
             richTextBox1.Text = time.ToString();
             dyd_textBox.Text = dyd.ToString();
             croc_textBox.Text = croc.ToString();
-
+            szop.Text = szopy.ToString();
         }
 
         private void saveSettings_Click(object sender, EventArgs e)
         {
-            form1.setVals(x_row, y_row, time, dyd, croc);
-            form1.opened = false;
-            this.Close();
+            if (x_row <= 10 && x_row>= 1 && y_row>=1 && y_row<= 10 && time >= 10 && time <= 60 && croc >= 0 && croc <= 1 && dyd>=1 && dyd <=6 && szopy >= 3 && szopy <= 8 )
+            {
+                form1.setVals(x_row, y_row, time, dyd, croc, szopy);
+                form1.opened = false;
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Prosze ustawic odpowiednie wartości zmiennych");
+            }
         }
         private void dyd_textBox_TextChanged(object sender, EventArgs e)
         {
@@ -57,6 +65,14 @@ namespace lab6_oliGawronska
             }
         }
 
+        private void szop_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(szop.Text))
+            {
+                szopy = int.Parse(szop.Text);
+            }
+        }
+
         //czas
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -66,7 +82,7 @@ namespace lab6_oliGawronska
             }
         }
 
-       
+
 
         private void y_textBox_TextChanged(object sender, EventArgs e)
         {
